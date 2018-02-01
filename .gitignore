@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.idea.*/
+*.iml
+*.ipr
+*.iws
+**/target/
+*~
+node
+node_modules
+npm-debug.log*
+
