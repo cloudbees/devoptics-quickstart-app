@@ -10,19 +10,19 @@
           "name": "Build",
           "master": "http://localhost:8080/",
           "job": "devoptics-quickstart/master",
-          "feeds": "qa"
+          "feeds": "staging"
         }
       ]
     },
     {
-      "id": "qa",
-      "name": "QA",
+      "id": "staging",
+      "name": "Staging",
       "gates": [
         {
-          "id": "qa",
-          "name": "QA",
+          "id": "staging",
+          "name": "Staging",
           "master": "http://localhost:8080/",
-          "job": "devoptics-quickstart/qa"
+          "job": "devoptics-quickstart/staging"
         }
       ]
     }
