@@ -1,0 +1,30 @@
+{
+  "name": "DevOptics Quickstart App",
+  "phases": [
+    {
+      "id": "build",
+      "name": "Build",
+      "gates": [
+        {
+          "id": "build",
+          "name": "Build",
+          "master": "http://localhost:8080/",
+          "job": "devoptics-quickstart/master",
+          "feeds": "qa"
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "gates": [
+        {
+          "id": "qa",
+          "name": "QA",
+          "master": "http://localhost:8080/",
+          "job": "devoptics-quickstart/qa"
+        }
+      ]
+    }
+  ]
+}
