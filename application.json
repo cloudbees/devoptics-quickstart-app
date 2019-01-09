@@ -15,6 +15,18 @@
       ]
     },
     {
+      "id": "tests",
+      "name": "Tests",
+      "gates": [
+        {
+          "id": "tests",
+          "name": "Tests",
+          "master": "http://localhost:8080/",
+          "job": "devoptics-quickstart/tests"
+        }
+      ]
+    },
+    {
       "id": "staging",
       "name": "Staging",
       "gates": [
@@ -23,6 +35,18 @@
           "name": "Staging",
           "master": "http://localhost:8080/",
           "job": "devoptics-quickstart/staging"
+        }
+      ]
+    },
+    {
+      "id": "integration-tests",
+      "name": "Integration Tests",
+      "gates": [
+        {
+          "id": "integration-tests",
+          "name": "Integration Tests",
+          "master": "http://localhost:8080/",
+          "job": "devoptics-quickstart/integration-tests"
         }
       ]
     },
