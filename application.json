@@ -25,6 +25,18 @@
           "job": "devoptics-quickstart/staging"
         }
       ]
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "gates": [
+        {
+          "id": "production",
+          "name": "Production",
+          "master": "http://localhost:8080/",
+          "job": "devoptics-quickstart/production"
+        }
+      ]
     }
   ]
 }
