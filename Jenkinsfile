@@ -1,3 +1,5 @@
+properties([parameters([string(defaultValue: "${BUILD_NUMBER}", name: 'artifactId')])])
+
 node {
     stage ('checkout') {
         checkout scm
@@ -5,13 +7,12 @@ node {
 
     stage ('build') {
         // explicitly consume specific artifact
-        sh "date > an-artifact"
-        archiveArtifacts artifacts: 'an-artifact'
-        gateProducesArtifact file: 'an-artifact'
+        copyArtifacts projectName: 'devoptics-quickstart/tests'
+        gateConsumesArtifact file: 'an-artifact'
 
         // explicitly produce specific "synthetic" artifact
         sh "date > another-artifact"
         archiveArtifacts artifacts: 'another-artifact'
-        gateProducesArtifact id: "artifact-${BUILD_NUMBER}", type: 'myType', label: "My Artifact ${BUILD_NUMBER}"
+        gateProducesArtifact id: "${artifactId}", type: 'myType', label: "My Artifact ${artifactId}"
     }
 }
