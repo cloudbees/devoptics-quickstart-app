@@ -13,6 +13,6 @@ node {
         // explicitly produce specific "synthetic" artifact
         sh "date > another-artifact"
         archiveArtifacts artifacts: 'another-artifact'
-        gateProducesArtifact id: "${artifactId}", type: 'myType', label: "My Artifact ${artifactId}"
+        gateProducesArtifact id: "${params.artifactId}", type: 'myType', label: "My Artifact ${params.artifactId}"
     }
 }
