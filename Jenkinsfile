@@ -7,6 +7,6 @@ node {
 
     stage ('build') {
         // explicitly consume specific "synthetic" artifact
-        gateConsumesArtifact id: "${artifactId}", type: 'myType', label: "My Artifact ${artifactId}"
+        gateConsumesArtifact id: "${params.artifactId}", type: 'myType', label: "My Artifact ${artifactId}"
     }
 }
