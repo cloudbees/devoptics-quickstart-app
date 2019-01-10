@@ -9,7 +9,7 @@ node {
         // explicitly consume specific "synthetic" artifact
         gateConsumesArtifact id: "${params.artifactId}", type: 'myType', label: "My Artifact ${params.artifactId}"
 
-        // explicitly consume specific "synthetic" artifact
+        // explicitly produce another specific "synthetic" artifact for freestyle job
         gateProducesArtifact id: 'myArtifact', type: 'myType', label: "My Final Production Artifact"
     }
 }
