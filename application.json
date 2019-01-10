@@ -52,6 +52,18 @@
           "feeds": "production"
         }
       ]
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "gates": [
+        {
+          "id": "production",
+          "name": "Production",
+          "master": "http://jenkins.customer.test:8080/jenkins/",
+          "job": "devoptics-quickstart-freestyle"
+        }
+      ]
     }
   ]
 }
