@@ -1,4 +1,4 @@
-# DevOptics Quickstart Demo
+# DevOptics Quickstart Demo App
 
 1.  Clone or fork the git repo https://github.com/cloudbees/devoptics-quickstart-app.
 2.  Verify maven is installed in Jenkins under "Managing Jenkins" → "Global Tool Configuration".  
